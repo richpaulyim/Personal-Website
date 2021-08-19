@@ -1,1 +1,1 @@
-# https://richpaulyim.github.io
+# https://www.richpaulyim.com
