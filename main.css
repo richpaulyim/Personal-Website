@@ -774,7 +774,7 @@ background-color: rgba(0, 0, 0, 0.3);
 .logo-header {
 	position: absolute;
 	top: 45%;
-	left: 50%;
+	left: 40%;
 	transform: translate(-50%, -50%);
 	color: #ffffff;
 }
@@ -787,9 +787,6 @@ background-color: rgba(0, 0, 0, 0.3);
 	font-size: 10rem;
 }
 
-p {
-	flex-wrap: wrap;
-}
 span {
 	padding:0.3rem;
 }
