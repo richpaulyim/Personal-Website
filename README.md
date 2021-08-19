@@ -1,1 +1,1 @@
-# https://www.richpaulyim.com
+# richpaulyim.com
