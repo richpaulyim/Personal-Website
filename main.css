@@ -787,6 +787,13 @@ background-color: rgba(0, 0, 0, 0.3);
 	font-size: 10rem;
 }
 
+p {
+	flex-wrap: wrap;
+}
+span {
+	padding:0.3rem;
+}
+
 .logo.active {
 	bottom: 0;
 	opacity: 1;
