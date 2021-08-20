@@ -1,0 +1,180 @@
+* {
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+ --ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+	background: transparent;
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+
+ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+  perspective: 100px;
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  counter-reset: item;
+  scroll-behavior: smooth;
+	overflow: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  background-color:transparent;
+  counter-increment: item;
+}
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 40%;
+  width: 10rem;
+  height: 20%;
+  font-size: 0;
+  outline: 0;
+  border-radius: 20px;
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+  background-color: rgba(255, 0, 0, 0.671);
+}
+
+.carousel::before,
+.carousel__prev {
+  left: 0rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: 0rem;
+}
+
+.carousel::before,
+.carousel::after {
+  content: '';
+  z-index: 1;
+  background-size: 3rem 3rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 5rem;
+  pointer-events: none;
+  text-align: center;
+  backdrop-filter: 
+    blur(9px) saturate(160%) 
+    contrast(100%) brightness(130%);
+  -webkit-backdrop-filter: 
+    blur(9px) saturate(160%) 
+    contrast(100%) brightness(130%);
+}
+
+.carousel::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+#carousel__slide1{
+  background-image: radial-gradient(circle,rgba(255, 0, 0, 0.1),transparent);
+}
+#carousel__slide2{
+  background-image: radial-gradient(circle,rgba(0, 255, 0, 0.1),transparent);
+}
+#carousel__slide3{
+  background-image: radial-gradient(circle, rgba(0, 0, 255, 0.1),transparent);
+}
+@media all and (max-width:1220px) {
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 40%;
+    width: 5rem;
+    height: 20%;
+    font-size: 0;
+    outline: 0;
+    border-radius: 20px;
+  }
+}
+
+@media all and (max-width:680px) {
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 20%;
+    font-size: 0;
+    outline: 0;
+    border-radius: 20px;
+  }
+}

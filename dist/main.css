@@ -1,0 +1,819 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
+  -webkit-overflow-scrolling: touch;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-y: auto;
+}
+html,body{
+  height: 100%
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index:-2;
+}
+#viewportcard {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+  font-style: italic;
+}
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+li {
+  font-size: 3rem;
+}
+#landing h2 {
+  font-size: 12rem;
+  font-weight: normal;
+  margin-bottom: 400px;
+}
+#landing h3 {
+  font-size: 5rem;
+  color: rgb(255, 0, 0);
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+button:hover {
+  background: #27394e;
+}
+/* Button focus to make website accessible */
+button:focus {
+  background: #2c3f57;
+  outline-style: solid;
+  outline-color: cornflowerblue;
+}
+a#filelink:hover{
+  background:blue;
+}
+a#filelink {
+  text-decoration: underline;
+}
+
+/*=========================*/
+/* Nav Section With Landing*/
+/*=========================*/
+nav {
+  color: white;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  backdrop-filter: 
+    blur(5px) saturate(160%) 
+    contrast(100%) brightness(130%);
+  -webkit-backdrop-filter: 
+    blur(5px) saturate(160%) 
+    contrast(100%) brightness(130%);
+}
+nav ul {
+  font-style: 9rem;
+  position: relative;
+  display: flex;
+  flex: 1 1 20rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+nav a {
+  float: left;
+  display: block center;
+  color: white;
+  text-align: center;
+  padding: 1vw; 
+  text-decoration: none;
+}
+nav #tab0 {
+  position: relative;
+  padding: 1vh;
+  margin: 1vh;
+}
+nav a:hover {
+  background-color: rgb(255, 0, 0);
+  color:black;
+}
+nav a:active{
+  color:green;
+  background-color: rgb(8, 8, 8);
+}
+nav a:active h1 {
+  color:blue;
+  background-color: rgb(8, 8, 8);
+}
+
+#landing{
+  text-align: center;
+  justify-content: center;
+  color: white;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+a #landing {
+  font-size: 20rem;
+}
+.landing-head {
+  width: 90%;
+  margin: auto;
+}
+.landing-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  /* Optional 
+  text-decoration-thickness: 0.5rem;
+  */
+}
+.landing-head h3 {
+  padding: 4rem 10rem;
+  background: linear-gradient(#131c27, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/*===================*/
+/* Portfolio SECTION */
+/*===================*/
+#portfolio {
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width:100%;
+  height:100px;
+}
+.portfolio-head {
+  width: 100%;
+  margin: auto;
+}
+.portfolio-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  /* Optional 
+  text-decoration-thickness: 0.5rem;
+  */
+}
+.portfolio-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(#131c27, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#title {
+  font-size: 7rem;
+  color: red;
+  padding: 1rem 0 1rem 0;
+}
+#subtitle {
+  font-size: 4rem;
+  font-style: italic;
+}
+.fullprojectscard {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 0 0 0 ;
+}
+#portfolio .card {
+  text-align: left;
+  font-size: 2rem;
+}
+.paper {
+  margin: 1rem;
+}
+#projectstitle {
+  font-size: 20vmin;
+  position: absolute;
+  z-index: -2;
+  top: 45%;
+  left: 8%;
+  color:rgba(255, 255, 255, 0.712)
+}
+#projectcontent_h1 {
+  font-size: 120%;
+}
+#portfolio .card ol {
+  font-size: 0.4rem;
+}
+.red {
+  color: red;
+}
+#projectcontent_h1 {
+  font-size: 4rem;
+}
+.paper {
+  font-size: 3rem;
+  padding: 1rem;
+}
+.project {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+
+/*===============*/
+/* Roles SECTION */
+/*===============*/
+#roles {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.roles-head {
+  width: 90%;
+  margin: auto;
+}
+.roles-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  /* Optional 
+  text-decoration-thickness: 0.5rem;
+  */
+}
+.roles-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(#131c27, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cards ul li {
+  font-size: 55%;
+  margin: 1rem 0;
+}
+#roles .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+}
+.rolecontent {
+  font-size: 6rem;
+  padding: 2rem;
+}
+/* Role cards */
+.cards {
+  position: relative;
+  top: 20%;
+  height: 60%;
+  width: 80%;
+  display: flex;
+  margin:auto;
+  flex-wrap: wrap;
+}
+.fullrolecard {
+  position: relative;
+  display: flex;
+  width: 50%;
+  margin: 0 0 0 0 ;
+  padding: 0 0 0 0;
+}
+#rolestitle {
+  font-size: 10vmin;
+  position: absolute;
+  z-index: -2;
+  top: 65%;
+  left:10%;
+  color:rgba(255, 255, 255, 0.712)
+}
+.card {
+  margin: 2vw;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  flex: 1 1 25rem;
+  border-radius: 20px;
+  backdrop-filter: 
+    blur(4px) saturate(160%) 
+    contrast(100%) brightness(130%);
+  -webkit-backdrop-filter: 
+    blur(4px) saturate(160%) 
+    contrast(100%) brightness(130%);
+}
+
+/*===============*/
+/* About SECTION */
+/*===============*/
+#about {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.about-head {
+  width: 90%;
+  margin: auto;
+}
+.about-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+}
+.about-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(#131c27, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#icondiv {
+  font-size: 4rem;  
+}
+
+/*===============*/
+/* Footer Section */
+/*===============*/
+footer {
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  list-style-type: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.4rem;
+  display: block;
+  z-index: 2;
+  backdrop-filter: 
+    blur(9px) saturate(160%) 
+    contrast(100%) brightness(130%);
+  -webkit-backdrop-filter: 
+    blur(9px) saturate(160%) 
+    contrast(100%) brightness(130%);
+}
+.footer-wrapper {
+  position: relative;
+  display: flex;
+  padding: 2rem;
+  margin: auto;
+  align-items: center;
+  min-height: 10vh; 
+  flex-wrap: wrap;
+}
+footer h5 {
+  flex: 1 1 40rem;
+}
+#icons {
+  overflow-wrap: break-word;
+  position: relative;
+  font-size: 0.7rem;
+  padding: auto;
+  margin: auto;
+}
+.icon {
+  padding: 1rem;
+  width: 7rem;
+}
+
+/* about */
+#aboutcard{
+  position: absolute;
+  height: 60%;
+  left:10%;
+  width: 80%;
+  float: left;
+  display: flex;
+  border-radius: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: 
+    blur(20px) saturate(160%) 
+    contrast(100%) brightness(130%);
+  -webkit-backdrop-filter: 
+    blur(20px) saturate(160%) 
+    contrast(100%) brightness(130%);
+}
+.aboutsent {
+  padding: 0.2rem;
+}
+/* Images and Icons */
+#abouttitle {
+  padding: 1rem 0 1rem 0;
+  color: red;
+  font-size: 8rem;
+}
+#abouttext {
+  font-size: 3rem;
+  margin: 0 6rem;
+}
+/* footer */
+.about-head {
+ color: white;
+}
+
+/*
+media query for the about section
+*/
+@media all and (max-width: 1470px){
+  #abouttitle {
+    font-size: 3rem;
+  }
+  #abouttext {
+    font-size: 1.1rem;
+  }
+
+  #title {
+    font-size: 2.2rem;
+  }
+  #subtitle {
+    font-size: 1.9rem;
+  }
+  .roletext {
+    font-size: 2.8rem;
+  }
+  #abouttext {
+    font-size: 1.8rem;
+  }
+
+  .paper {
+    font-size: 2rem;
+  }
+  .paper:hover {
+    background-color: red;
+  }
+  .paper:hover .red {
+    color:black;
+  }
+  .project {
+    font-size: 1.4rem;
+  }
+  .project:hover {
+    background-color: green;
+  }
+}
+@media all and (max-width: 1170px){
+  #abouttitle {
+    font-size: 2.5rem;
+  }
+  #abouttext {
+    font-size: 1.6rem;
+  }
+  .icon {
+    padding: 1rem;
+    width: 4rem;
+  }
+  #projectstitle {
+    position: absolute;
+    top: 70%;
+    font-size: 10rem;
+  }
+}
+
+/*Mobile*/
+@media all and (max-width:680px) {
+  .fullrolecard {
+    width: 100%;
+  }
+  #landing-head h2 {
+    display: none;
+  }
+  #landing-head h3 {
+    top: 20%;
+    font-size: 3rem;
+  }
+  nav a#tab0 {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.082);
+    width:100%;
+  }
+  nav {
+    background-color: rgba(255, 255, 255, 0.13);
+  }
+
+  #projectstitle {
+    top: 70%;
+    font-size: 5rem;
+  }
+  .paper {
+    font-size: 1rem;;
+  }
+  .project {
+    font-size: 1rem;;
+  }
+  #projectcontent_h1 {
+    font-size: 2.4rem;
+  }
+
+  #title {
+	  font-size: 1.5rem;
+  }
+  #subtitle {
+    font-size: 1.1rem;
+  }
+  .roletext {
+    font-size: 1.6rem;
+  }
+
+  #abouttext {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  a#tab0 h1{
+    font-size: 3rem;
+  }
+  .footer-wrapper {
+  position: relative;
+  display: flex;
+  padding: 2rem;
+  margin: auto;
+  align-items: center;
+  min-height: 2vh; 
+  flex-wrap: wrap;
+  }
+}
+@media all and (max-width:1220px) {
+  header#landing-head h2 {
+    top: 10%;
+    font-size: 5rem;
+    display: none;
+  }
+  header#landing-head h3 {
+    top: 20%;
+    font-size: 5rem;
+  }
+}
+* {
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+ --ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+	background: transparent;
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+
+ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+  perspective: 100px;
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  counter-reset: item;
+  scroll-behavior: smooth;
+	overflow: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  background-color:transparent;
+  counter-increment: item;
+}
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 40%;
+  width: 10rem;
+  height: 20%;
+  font-size: 0;
+  outline: 0;
+  border-radius: 20px;
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+  background-color: rgba(255, 0, 0, 0.671);
+}
+
+.carousel::before,
+.carousel__prev {
+  left: 0rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: 0rem;
+}
+
+.carousel::before,
+.carousel::after {
+  content: '';
+  z-index: 1;
+  background-size: 3rem 3rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 5rem;
+  pointer-events: none;
+  text-align: center;
+  backdrop-filter: 
+    blur(9px) saturate(160%) 
+    contrast(100%) brightness(130%);
+  -webkit-backdrop-filter: 
+    blur(9px) saturate(160%) 
+    contrast(100%) brightness(130%);
+}
+
+.carousel::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+#carousel__slide1{
+  background-image: radial-gradient(circle,rgba(255, 0, 0, 0.1),transparent);
+}
+#carousel__slide2{
+  background-image: radial-gradient(circle,rgba(0, 255, 0, 0.1),transparent);
+}
+#carousel__slide3{
+  background-image: radial-gradient(circle, rgba(0, 0, 255, 0.1),transparent);
+}
+@media all and (max-width:1220px) {
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 40%;
+    width: 5rem;
+    height: 20%;
+    font-size: 0;
+    outline: 0;
+    border-radius: 20px;
+  }
+}
+
+@media all and (max-width:680px) {
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 20%;
+    font-size: 0;
+    outline: 0;
+    border-radius: 20px;
+  }
+}
+.intro {
+	pointer-events: none;
+	position: fixed;
+	z-index:3;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100vh;
+	background-color: #000000;
+	transition: 1s;
+}
+.logo-header {
+	position: absolute;
+	top: 45%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	color: #ffffff;
+}
+
+.logo {
+	position: relative;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+	font-size: 10rem;
+}
+
+span {
+	padding:0.3rem;
+}
+
+.logo.active {
+	bottom: 0;
+	opacity: 1;
+	transition: ease-in-out 2s; 
+}
+
+.logo.fade {
+	bottom: 150px;
+	opacity: 0;
+	transition: ease-in-out 1s;
+}
+
+.intro.fade {
+	opacity: 0;
+	transition: ease-out 3s;
+}
+
+@media all and (max-width:680px) {
+	span {
+		padding:0 0;
+		margin:0 0;
+		font-size: 3rem;
+	}
+}
+
+/*# sourceMappingURL=main.css.map*/
