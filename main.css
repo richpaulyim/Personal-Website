@@ -250,6 +250,18 @@ a #landing {
   font-size: 3rem;
   padding: 1rem;
 }
+.paper:hover {
+  background-color: red;
+}
+.paper:hover .red {
+  color:black;
+}
+.project:hover {
+  background-color: green;
+}
+.project:hover .green {
+  color: black;
+}
 
 
 /*===============*/
@@ -472,17 +484,8 @@ media query for the about section
   .paper {
     font-size: 2rem;
   }
-  .paper:hover {
-    background-color: red;
-  }
-  .paper:hover .red {
-    color:black;
-  }
   .project {
     font-size: 1.4rem;
-  }
-  .project:hover {
-    background-color: green;
   }
 }
 @media all and (max-width: 1170px){
